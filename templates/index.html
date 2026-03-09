@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Product Hunter | Premium Product Intelligence Platform</title>
+    <title>AI Product Hunter | Premium Green Luxury Product Intelligence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-        
+
         :root {
-            --primary: #0b4f6c;
-            --primary-dark: #083b4f;
-            --secondary: #1e7b9e;
-            --accent: #3da5d9;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --dark: #0f172a;
-            --success: #16a34a;
-            --warning: #f97316;
-            --danger: #dc2626;
+            --green-dark: #0d3b1f;
+            --green-medium: #1a6b3b;
+            --green-light: #2e8b57;
+            --green-accent: #4caf50;
+            --green-pastel: #c8e6c9;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark: #1a2e1a;
         }
 
         body {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--green-dark), var(--green-medium), var(--green-light));
             min-height: 100vh;
+            color: var(--white);
         }
 
         /* Navbar */
         .navbar {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -49,35 +49,43 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
-        .logo i { 
-            color: var(--secondary);
-            font-size: 2rem; 
+        @keyframes glow {
+            from { text-shadow: 0 0 5px var(--gold), 0 0 10px var(--gold); }
+            to { text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold); }
         }
 
-        .nav-links { 
-            display: flex; 
-            gap: 2rem; 
-            align-items: center; 
+        .logo i {
+            font-size: 2.2rem;
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark);
+            color: var(--white);
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 1.1rem;
         }
 
-        .nav-links a:hover { 
-            color: var(--secondary); 
+        .nav-links a:hover {
+            color: var(--gold);
         }
 
         .btn {
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1.8rem;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
@@ -85,28 +93,29 @@
             border: none;
             text-decoration: none;
             display: inline-block;
+            font-size: 1rem;
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
+            border: 2px solid var(--gold);
+            color: var(--gold);
         }
 
         .btn-outline:hover {
-            background: var(--secondary);
-            color: white;
+            background: var(--gold);
+            color: var(--green-dark);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            box-shadow: 0 4px 15px rgba(11, 79, 108, 0.3);
+            background: var(--gold);
+            color: var(--green-dark);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(11, 79, 108, 0.4);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
         }
 
         /* Hero Section */
@@ -125,7 +134,7 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: white;
+            color: var(--white);
         }
 
         .hero-content p {
@@ -142,12 +151,13 @@
         }
 
         .stat-item {
-            color: white;
+            color: var(--white);
         }
 
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
+            color: var(--gold);
         }
 
         .stat-label {
@@ -180,13 +190,14 @@
 
         /* Trusted By Section */
         .trusted-by {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             padding: 60px 5%;
             text-align: center;
+            backdrop-filter: blur(5px);
         }
 
         .trusted-by h3 {
-            color: var(--gray);
+            color: var(--white);
             font-weight: 400;
             margin-bottom: 40px;
         }
@@ -201,8 +212,8 @@
         .logos span {
             font-size: 1.5rem;
             font-weight: 600;
-            color: var(--dark);
-            opacity: 0.6;
+            color: var(--white);
+            opacity: 0.7;
         }
 
         /* Features Section */
@@ -210,7 +221,7 @@
             padding: 80px 5%;
             max-width: 1400px;
             margin: 0 auto;
-            background: white;
+            color: var(--white);
         }
 
         .section-title {
@@ -220,15 +231,15 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--dark);
+            color: var(--gold);
             margin-bottom: 20px;
         }
 
         .section-title p {
-            color: var(--gray);
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto;
+            opacity: 0.9;
         }
 
         .features-grid {
@@ -238,21 +249,23 @@
         }
 
         .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 30px;
             border-radius: 20px;
-            background: var(--light);
             transition: transform 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .feature-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: var(--gold);
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -262,17 +275,17 @@
 
         .feature-icon i {
             font-size: 1.5rem;
-            color: white;
+            color: var(--green-dark);
         }
 
         .feature-card h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--dark);
+            color: var(--gold);
         }
 
         .feature-card p {
-            color: var(--gray);
+            color: rgba(255, 255, 255, 0.9);
             line-height: 1.6;
         }
 
@@ -281,14 +294,14 @@
             padding: 80px 5%;
             max-width: 1400px;
             margin: 0 auto;
-            background: white;
         }
 
         .dashboard-container {
-            background: var(--light);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .dashboard-header {
@@ -300,6 +313,11 @@
             gap: 20px;
         }
 
+        .dashboard-header h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+
         .filters {
             display: flex;
             gap: 15px;
@@ -307,10 +325,49 @@
         }
 
         .filters select, .filters input {
-            padding: 10px 15px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+            padding: 12px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
             outline: none;
+            font-size: 1rem;
+        }
+
+        .filters select option {
+            background: var(--green-dark);
+        }
+
+        .filters input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hunting-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .hunting-badge {
+            background: var(--gold);
+            color: var(--green-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hunting-badge i {
+            font-size: 1.2rem;
+        }
+
+        .hunting-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--gold);
         }
 
         .metrics {
@@ -321,14 +378,15 @@
         }
 
         .metric-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
         }
 
         .metric-card h4 {
-            color: var(--gray);
+            color: var(--gold);
             font-size: 0.9rem;
             margin-bottom: 10px;
         }
@@ -336,52 +394,54 @@
         .metric-card p {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--white);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
         }
 
         th {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            background: var(--gold);
+            color: var(--green-dark);
             padding: 15px;
             text-align: left;
+            font-weight: 600;
         }
 
         td {
             padding: 12px 15px;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
         }
 
         tr:hover {
-            background: #f1f5f9;
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .High { 
-            color: var(--danger); 
-            font-weight: 600; 
+        .trending-row {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--gold);
         }
-        .Medium { 
-            color: var(--warning); 
-            font-weight: 600; 
+
+        .high-margin-row {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--green-accent);
         }
-        .Low { 
-            color: var(--success); 
-            font-weight: 600; 
-        }
+
+        .High { color: #ff8a80; font-weight: 600; }
+        .Medium { color: #ffb74d; font-weight: 600; }
+        .Low { color: #a5d6a7; font-weight: 600; }
 
         /* Pricing Section */
         .pricing {
             padding: 80px 5%;
             max-width: 1400px;
             margin: 0 auto;
-            background: white;
         }
 
         .pricing-grid {
@@ -392,7 +452,9 @@
         }
 
         .pricing-card {
-            background: var(--light);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             padding: 30px;
             position: relative;
@@ -404,7 +466,7 @@
         }
 
         .pricing-card.popular {
-            border: 2px solid var(--secondary);
+            border: 2px solid var(--gold);
             transform: scale(1.05);
         }
 
@@ -413,29 +475,30 @@
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--secondary);
-            color: white;
+            background: var(--gold);
+            color: var(--green-dark);
             padding: 5px 20px;
             border-radius: 50px;
             font-size: 0.9rem;
+            font-weight: 600;
         }
 
         .pricing-card h3 {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            color: var(--dark);
+            color: var(--gold);
         }
 
         .price {
             font-size: 3rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--white);
             margin-bottom: 20px;
         }
 
         .price span {
             font-size: 1rem;
-            color: var(--gray);
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .features-list {
@@ -445,12 +508,13 @@
 
         .features-list li {
             padding: 10px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .features-list li:before {
             content: "✓ ";
-            color: var(--secondary);
+            color: var(--gold);
             font-weight: bold;
         }
 
@@ -466,7 +530,6 @@
             padding: 80px 5%;
             max-width: 1400px;
             margin: 0 auto;
-            background: var(--light);
         }
 
         .testimonials-grid {
@@ -477,21 +540,22 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
 
         .testimonial-card i {
-            color: var(--secondary);
+            color: var(--gold);
             font-size: 2rem;
             margin-bottom: 20px;
         }
 
         .testimonial-card p {
             font-style: italic;
-            color: var(--dark);
+            color: var(--white);
             margin-bottom: 20px;
             line-height: 1.6;
         }
@@ -503,19 +567,19 @@
         }
 
         .author-info h4 {
-            color: var(--dark);
+            color: var(--gold);
             margin-bottom: 5px;
         }
 
         .author-info p {
-            color: var(--gray);
+            color: rgba(255, 255, 255, 0.7);
             font-style: normal;
             margin: 0;
         }
 
         /* Footer */
         .footer {
-            background: var(--dark);
+            background: rgba(0, 0, 0, 0.3);
             color: white;
             padding: 60px 5% 30px;
         }
@@ -530,20 +594,20 @@
         }
 
         .footer-section h4 {
-            color: var(--accent);
+            color: var(--gold);
             margin-bottom: 20px;
         }
 
         .footer-section a {
             display: block;
-            color: #94a3b8;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             margin-bottom: 10px;
             transition: color 0.3s;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: var(--gold);
         }
 
         .social-links {
@@ -555,24 +619,25 @@
         .social-links a {
             width: 40px;
             height: 40px;
-            background: #1e293b;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             transition: background 0.3s;
         }
 
         .social-links a:hover {
-            background: var(--secondary);
+            background: var(--gold);
+            color: var(--green-dark);
         }
 
         .copyright {
             text-align: center;
             padding-top: 30px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.6);
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -595,7 +660,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-robot"></i>
+                <i class="fas fa-tree"></i>
                 <span>AI Product Hunter</span>
             </div>
             <div class="nav-links">
@@ -634,7 +699,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://placehold.co/600x400/1e7b9e/white?text=AI+Product+Hunter+Dashboard" alt="Dashboard Preview">
+            <img src="https://placehold.co/600x400/1a6b3b/ffd700?text=AI+Product+Hunter+Dashboard" alt="Dashboard Preview">
         </div>
     </section>
 
@@ -689,46 +754,59 @@
         </div>
     </section>
 
-    <!-- Product Dashboard Preview -->
+    <!-- Product Dashboard with Hunting Features -->
     <section class="dashboard-preview">
         <div class="section-title">
             <h2>Real-Time Product Intelligence</h2>
-            <p>Make data-driven decisions with our advanced analytics dashboard.</p>
+            <p>Make data-driven decisions with our advanced analytics dashboard. Identify trending and high-margin products instantly.</p>
         </div>
         <div class="dashboard-container">
             <div class="dashboard-header">
                 <h3>Trending Products</h3>
                 <div class="filters">
-                    <input type="text" placeholder="Search products...">
-                    <select>
-                        <option>All Categories</option>
-                        <option>Electronics</option>
-                        <option>Fashion</option>
-                        <option>Home</option>
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Home & Kitchen">Home & Kitchen</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Toys">Toys</option>
+                        <option value="Automotive">Automotive</option>
+                        <option value="Books">Books</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Health">Health</option>
                     </select>
                 </div>
             </div>
-            
+
+            <div class="hunting-badges">
+                <span class="hunting-badge" onclick="filterTrending()"><i class="fas fa-fire"></i> Trending Products</span>
+                <span class="hunting-badge" onclick="filterHighMargin()"><i class="fas fa-chart-line"></i> High Margin (40%+)</span>
+                <span class="hunting-badge" onclick="resetFilters()"><i class="fas fa-undo"></i> Reset</span>
+            </div>
+
             <div class="metrics">
                 <div class="metric-card">
                     <h4>Total Products</h4>
-                    <p>1,547</p>
+                    <p id="totalProducts">{{ products|length }}</p>
                 </div>
                 <div class="metric-card">
                     <h4>Avg Demand</h4>
-                    <p>78%</p>
+                    <p id="avgDemand">78%</p>
                 </div>
                 <div class="metric-card">
                     <h4>Avg Profit</h4>
-                    <p>34%</p>
+                    <p id="avgProfit">34%</p>
                 </div>
                 <div class="metric-card">
                     <h4>High Competition</h4>
-                    <p>42%</p>
+                    <p id="highCompetition">42%</p>
                 </div>
             </div>
-            
-            <table>
+
+            <table id="productTable">
                 <thead>
                     <tr>
                         <th>Product Name</th>
@@ -740,9 +818,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for p in products[:20] %}
-                    <tr>
-                        <td>{{ p.name }}</td>
+                    {% for p in products %}
+                    <tr class="{% if p.trending %}trending-row{% elif p.high_margin %}high-margin-row{% endif %}" data-category="{{ p.category }}" data-name="{{ p.name }}" data-demand="{{ p.demand[:-1] }}" data-profit="{{ p.profit[:-1] }}">
+                        <td>{{ p.name }}{% if p.trending %} <i class="fas fa-fire" style="color: #ffd700;"></i>{% endif %}{% if p.high_margin %} <i class="fas fa-chart-line" style="color: #4caf50;"></i>{% endif %}</td>
                         <td>{{ p.price }}</td>
                         <td>{{ p.rating }} ⭐</td>
                         <td>{{ p.demand }}</td>
@@ -879,5 +957,93 @@
             © 2025 AI Product Hunter. All rights reserved. Empowering entrepreneurs worldwide.
         </div>
     </footer>
+
+    <script>
+        function filterTrending() {
+            let rows = document.querySelectorAll('#productTable tbody tr');
+            rows.forEach(row => {
+                if (row.classList.contains('trending-row')) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            updateMetrics();
+        }
+
+        function filterHighMargin() {
+            let rows = document.querySelectorAll('#productTable tbody tr');
+            rows.forEach(row => {
+                if (row.classList.contains('high-margin-row')) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            updateMetrics();
+        }
+
+        function resetFilters() {
+            let rows = document.querySelectorAll('#productTable tbody tr');
+            rows.forEach(row => row.style.display = '');
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoryFilter').value = 'all';
+            updateMetrics();
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let search = this.value.toLowerCase();
+            let rows = document.querySelectorAll('#productTable tbody tr');
+            rows.forEach(row => {
+                let name = row.dataset.name.toLowerCase();
+                if (name.includes(search)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            updateMetrics();
+        });
+
+        document.getElementById('categoryFilter').addEventListener('change', function() {
+            let category = this.value;
+            let rows = document.querySelectorAll('#productTable tbody tr');
+            rows.forEach(row => {
+                if (category === 'all' || row.dataset.category === category) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            updateMetrics();
+        });
+
+        function updateMetrics() {
+            let rows = document.querySelectorAll('#productTable tbody tr');
+            let visibleCount = 0;
+            let totalDemand = 0;
+            let totalProfit = 0;
+            let highCompCount = 0;
+
+            rows.forEach(row => {
+                if (row.style.display !== 'none') {
+                    visibleCount++;
+                    let demand = parseInt(row.dataset.demand);
+                    let profit = parseInt(row.dataset.profit);
+                    totalDemand += demand;
+                    totalProfit += profit;
+                    if (row.cells[5].innerText === 'High') highCompCount++;
+                }
+            });
+
+            document.getElementById('totalProducts').innerText = visibleCount;
+            document.getElementById('avgDemand').innerText = visibleCount ? Math.round(totalDemand / visibleCount) + '%' : '0%';
+            document.getElementById('avgProfit').innerText = visibleCount ? Math.round(totalProfit / visibleCount) + '%' : '0%';
+            document.getElementById('highCompetition').innerText = visibleCount ? Math.round(highCompCount / visibleCount * 100) + '%' : '0%';
+        }
+
+        // Initialize metrics
+        updateMetrics();
+    </script>
 </body>
 </html>
